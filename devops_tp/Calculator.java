@@ -13,11 +13,15 @@ class Calculator {
     }
 
     public static void main(String[] args) {
-        System.out.println("Add: " + add(12, 5));
 
-        System.out.println("Divide: " + divide(12, 5));
+        int x = 12;
+        int y = 5;
 
-        System.out.println("Add: " + substrat(12, 5));
+        System.out.println("Add: " + x + "+" + y + add(x, y));
+
+        System.out.println("Divide: " + x + "/" + y + divide(x, y));
+
+        System.out.println("Substrat: " + x + "-" + y + substrat(x, y));
     }
 
 }
