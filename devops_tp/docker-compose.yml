@@ -1,0 +1,19 @@
+version: '2'
+services:
+  jenkins:
+    image: 'jenkins/jenkins:lts'
+    container_name: "jenkins_devops_tp"
+    labels:
+      kompose.service.type: nodeport
+    ports:
+      - '9090:8080'
+      #- '443:8443'
+      #- '50000:50000'
+    volumes:
+      - C:\Users\chris\Documents\workspaces\docker_volumes\jenkins_home:/var/jenkins_home
+      - C:\Users\chris\Documents\workspaces\docker_volumes\jenkins_config:/var/jenkins_config
+volumes:
+  jenkins_data:
+    driver: local
+  jenkins:
+    driver: local
